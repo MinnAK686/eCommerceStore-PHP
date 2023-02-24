@@ -1,0 +1,12 @@
+.authcontainer {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.fac {
+    color: #222222;
+    line-height: 80px;
+    font-weight: 500;
+}

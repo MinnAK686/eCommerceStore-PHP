@@ -32,9 +32,12 @@
 	<link rel="stylesheet" href="<?= BASE_URL ?>/views/assets/clients/css/nouislider.min.css">
 	<link rel="stylesheet" href="<?= BASE_URL ?>/views/assets/clients/css/bootstrap.css">
 	<link rel="stylesheet" href="<?= BASE_URL ?>/views/assets/clients/css/main.css">
+	<link rel="stylesheet" href="<?= BASE_URL ?>/views/assets/clients/css/app.css">
 </head>
 
 <body id="category">
+
+	<?php if(Request::URI() !== "login" && Request::URI() !== "register") : ?>
 
 	<!-- Start Header Area -->
 	<header class="header_area sticky-header">
@@ -57,6 +60,11 @@
 							<li class="nav-item">
 								<a href="products/cart" class="cart">
 									<span class="ti-bag"></span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="logout" class="cart">
+									<i class="fa fac fa-sign-out"></i>
 								</a>
 							</li>
 							<li class="nav-item">
@@ -102,4 +110,5 @@
 		</div>
 	</section>
 	<!-- End Banner Area -->
-	
+
+	<?php endif ?>
