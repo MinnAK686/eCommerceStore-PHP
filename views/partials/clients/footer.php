@@ -1,3 +1,5 @@
+<?php if(Request::URI() !== "login" && Request::URI() !== "register") : ?>
+
 </div>
 </div>
 </div>
@@ -73,10 +75,14 @@
 </footer>
 <!-- End footer Area -->
 
-<script src="<?= BASE_URL ?>/views/assets/clients/js/vendor/jquery-2.2.4.min.js"></script>
+<?php endif ?>
+
+<!-- <script src="/views/assets/clients/js/vendor/jquery-2.2.4.min.js"></script> -->
+<!-- <script src="/views/assets/clients/js/vendor/bootstrap.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha512-DUC8yqWf7ez3JD1jszxCWSVB0DMP78eOyBpMa5aJki1bIRARykviOuImIczkxlj1KhVSyS16w2FSQetkD4UU2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
 crossorigin="anonymous"></script>
-<script src="<?= BASE_URL ?>/views/assets/clients/js/vendor/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/js/bootstrap.min.js" integrity="sha512-8qmis31OQi6hIRgvkht0s6mCOittjMa9GMqtK9hes5iEQBQE/Ca6yGE5FsW36vyipGoWQswBj/QBm2JR086Rkw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="<?= BASE_URL ?>/views/assets/clients/js/jquery.ajaxchimp.min.js"></script>
 <script src="<?= BASE_URL ?>/views/assets/clients/js/jquery.nice-select.min.js"></script>
 <script src="<?= BASE_URL ?>/views/assets/clients/js/jquery.sticky.js"></script>
@@ -84,8 +90,8 @@ crossorigin="anonymous"></script>
 <script src="<?= BASE_URL ?>/views/assets/clients/js/jquery.magnific-popup.min.js"></script>
 <script src="<?= BASE_URL ?>/views/assets/clients/js/owl.carousel.min.js"></script>
 <!--gmaps Js-->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-<script src="<?= BASE_URL ?>/views/assets/clients/js/gmaps.min.js"></script>
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script> -->
+<!-- <script src="/views/assets/clients/js/gmaps.min.js"></script> -->
 <script src="<?= BASE_URL ?>/views/assets/clients/js/main.js"></script>
 </body>
 

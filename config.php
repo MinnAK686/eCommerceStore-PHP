@@ -3,9 +3,8 @@
 return [
     "database" => [
         "host" => "mysql:host=localhost",
-        // "dbName" => "ecommerce",
-        "dbName" => "todos",
+        "dbName" => "eCommerceStore",
         "username" => "root",
-        "password" => "venuxak"
+        "password" => "venuxakm"
     ]
 ];
