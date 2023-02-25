@@ -10,8 +10,8 @@ class AuthController {
         $passwordErr = null;
 
         if (Request::Method() === "POST") {
-            $email = request("email");
-            $password = request("password");
+            $email = escape(request("email"));
+            $password = escape(request("password"));
 
             if (empty($email) && empty($password)) {
                 $errors = "Please fill the required field!";
@@ -33,7 +33,7 @@ class AuthController {
                             "SELECT password FROM users WHERE email='$email'"
                         )->getOne();
                         
-                        if ($dbPassword->password !== $password) {
+                        if (!password_verify($password,$dbPassword->password)) {
                             // $errors = "Wrong Password";
                             $errors = "Wrong Credentials";
                         } else {
@@ -66,9 +66,9 @@ class AuthController {
         $emailErr = null;
         $passwordErr = null;
         if(Request::Method() === "POST") {
-            $fullname = request("fullname");
-            $email = request("email");
-            $password = request("password");
+            $fullname = escape(request("fullname"));
+            $email = escape(request("email"));
+            $password = password_hash(escape(request("password")), PASSWORD_DEFAULT);
             if(!$fullname && !$email && !$password) {
                 $errors = "Please fill the required field!";
             }elseif(!$fullname) {

@@ -9,6 +9,7 @@
                     <div>
                         <form action="login" method="POST">
                             <p class="text-danger"><?php if(!empty($errors)) echo $errors ?></p>
+                            <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
                             <div class="form-group mb-0">
                                 <label for="registerEmail">Email address</label>
                                 <input name="email" 

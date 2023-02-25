@@ -9,6 +9,7 @@
                     <div>
                         <form action="register" method="POST">
                             <p class="text-danger"><?php if(!empty($errors)) echo $errors ?></p>
+                            <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
                             <div class="form-group mb-3">
                                 <label for="registerName">Fullname</label>
                                 <input name="fullname" 

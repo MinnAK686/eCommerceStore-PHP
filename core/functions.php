@@ -32,6 +32,10 @@ function bool(bool $bool) {
     }
 }
 
+function escape($html) {
+    return htmlspecialchars($html);
+}
+
 function validateEmail($email) {
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
       // Email is valid
